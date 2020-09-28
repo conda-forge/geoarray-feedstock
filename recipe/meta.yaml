@@ -11,26 +11,29 @@ source:
   sha256: dd2372c5674c221ef1c098aac577fe8db9ea7c88580a1babc999824260e8db9f
 
 build:
-  number: 0
-  noarch: python
+  number: 1
+  skip: true  # [py<36]
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
-    - dask >=0.15.0
     - pip
     - python
-    - matplotlib-base
+    - setuptools
   run:
-    - dask >=0.15.0
+    - basemap
+    - bokeh
     - dill
     - folium
     - gdal >=2.1.0
     - geojson
+    - geopandas
+    - holoviews
     - matplotlib-base
     - mpld3
     - numpy
     - pandas
+    - pyproj >2.2.0
     - py-tools-ds >=0.14.35
     - python
     - scikit-image
@@ -40,16 +43,25 @@ requirements:
 test:
   imports:
     - geoarray
+    - geoarray.baseclasses
+    - geoarray.masks
+    - geoarray.metadata
+    - geoarray.subsetting
+  commands:
+    - pip check
+  requires:
+    - pip
+
 
 about:
   home: https://pypi.org/project/geoarray/
   summary: Fast Python interface for geodata - either on disk or in memory.
-  license: GPL-3.0-only
+  license: GPL-3.0-or-later
   license_file: LICENSE
 
 extra:
   recipe-maintainers:
+    - danschef
     - rluria14
     - ndmaxar
     - RyanHackney
-    - danschef

@@ -3,7 +3,7 @@ About geoarray
 
 Home: https://pypi.org/project/geoarray/
 
-Package license: GPL-3.0-only
+Package license: GPL-3.0-or-later
 
 Feedstock license: BSD-3-Clause
 
