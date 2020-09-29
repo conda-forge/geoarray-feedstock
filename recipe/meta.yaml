@@ -1,5 +1,5 @@
 {% set name = "geoarray" %}
-{% set version = "0.8.34" %}
+{% set version = "0.8.35" %}
 
 
 package:
@@ -8,21 +8,20 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: c6449c00ffcb2ac749d33fd2e7817123163f358b8a3f031992dcbf815483cdb5
+  sha256: ae61a542ad5f89175cbc56fbbc4da23009015759fbebc18259740e0bd16b298d
 
 build:
   number: 0
-  noarch: python
+  skip: true  # [py<36]
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
-    - dask >=0.15.0
     - pip
     - python
-    - matplotlib-base
+    - setuptools
   run:
-    - dask >=0.15.0
+    - basemap
     - dill
     - folium
     - gdal >=2.1.0
@@ -40,16 +39,25 @@ requirements:
 test:
   imports:
     - geoarray
+    - geoarray.baseclasses
+    - geoarray.masks
+    - geoarray.metadata
+    - geoarray.subsetting
+  commands:
+    - pip check
+  requires:
+    - pip
+
 
 about:
   home: https://pypi.org/project/geoarray/
   summary: Fast Python interface for geodata - either on disk or in memory.
-  license: GPL-3.0-only
+  license: GPL-3.0-or-later
   license_file: LICENSE
 
 extra:
   recipe-maintainers:
+    - danschef
     - rluria14
     - ndmaxar
     - RyanHackney
-    - danschef
