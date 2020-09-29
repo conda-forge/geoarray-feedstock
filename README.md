@@ -117,6 +117,7 @@ Feedstock Maintainers
 =====================
 
 * [@RyanHackney](https://github.com/RyanHackney/)
+* [@danschef](https://github.com/danschef/)
 * [@ndmaxar](https://github.com/ndmaxar/)
 * [@rluria14](https://github.com/rluria14/)
 
