@@ -1,5 +1,5 @@
 {% set name = "geoarray" %}
-{% set version = "0.8.34" %}
+{% set version = "0.8.35" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: c6449c00ffcb2ac749d33fd2e7817123163f358b8a3f031992dcbf815483cdb5
+  sha256: ae61a542ad5f89175cbc56fbbc4da23009015759fbebc18259740e0bd16b298d
 
 build:
   number: 1
@@ -22,18 +22,14 @@ requirements:
     - setuptools
   run:
     - basemap
-    - bokeh
     - dill
     - folium
     - gdal >=2.1.0
     - geojson
-    - geopandas
-    - holoviews
     - matplotlib-base
     - mpld3
     - numpy
     - pandas
-    - pyproj >2.2.0
     - py-tools-ds >=0.14.35
     - python
     - scikit-image
