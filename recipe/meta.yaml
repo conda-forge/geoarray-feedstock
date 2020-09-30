@@ -1,5 +1,5 @@
 {% set name = "geoarray" %}
-{% set version = "0.8.35" %}
+{% set version = "0.8.36" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: ae61a542ad5f89175cbc56fbbc4da23009015759fbebc18259740e0bd16b298d
+  sha256: 51fccbc09c10d3c95f6c4a8eed06ed7db590807fae226209d369d324db33960d
 
 build:
   number: 0
@@ -20,6 +20,7 @@ requirements:
     - pip
     - python
     - setuptools
+    - setuptools-git
   run:
     - basemap
     - dill
