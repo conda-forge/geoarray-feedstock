@@ -5,11 +5,9 @@ Home: https://pypi.org/project/geoarray/
 
 Package license: GPL-3.0-or-later
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/geoarray-feedstock/blob/master/LICENSE.txt)
 
 Summary: Fast Python interface for geodata - either on disk or in memory.
-
-
 
 Current build status
 ====================
