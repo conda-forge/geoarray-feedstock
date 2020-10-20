@@ -11,7 +11,7 @@ source:
   sha256: ae40ea659e54de0500492baeeb20dadc1a0011fa8e1861b65ae07696628c8bba
 
 build:
-  number: 0
+  number: 1
   skip: true  # [py<36]
   script: {{ PYTHON }} -m pip install . -vv
 
@@ -30,6 +30,7 @@ requirements:
     - matplotlib-base
     - numpy
     - pandas
+    - pyepsg  # optional dependency of cartopy, needed by geoarray
     - py-tools-ds >=0.14.35
     - python
     - scikit-image
