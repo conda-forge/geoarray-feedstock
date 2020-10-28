@@ -22,7 +22,7 @@ requirements:
     - setuptools
     - setuptools-git
   run:
-    - cartopy
+    - cartopy >=0.18.0
     - dill
     - folium
     - gdal >=2.1.0
