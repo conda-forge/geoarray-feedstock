@@ -24,9 +24,7 @@ requirements:
   run:
     - cartopy
     - dill
-    - folium
     - gdal >=2.1.0
-    - geojson
     - matplotlib-base
     - numpy
     - pandas
