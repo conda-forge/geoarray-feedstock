@@ -27,6 +27,7 @@ requirements:
     - folium
     - gdal >=2.1.0
     - geojson
+    - importlib-metadata  # [py37] # undefined upstream requirement (see https://github.com/conda-forge/filesystem-spec-feedstock/pull/43)
     - matplotlib-base
     - numpy
     - pandas
