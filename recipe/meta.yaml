@@ -11,7 +11,7 @@ source:
   sha256: 40d5d3d1db58144d83cbeb84447aa52284fda854ea0fb545abeccfeabc51b8fd
 
 build:
-  number: 0
+  number: 1
   skip: true  # [py<36]
   script: {{ PYTHON }} -m pip install . -vv
 
@@ -25,7 +25,6 @@ requirements:
     - cartopy
     - dill
     - gdal >=2.1.0
-    - importlib-metadata  # [py37] # undefined upstream requirement (see https://github.com/conda-forge/filesystem-spec-feedstock/pull/43)
     - matplotlib-base
     - numpy
     - pandas
@@ -34,7 +33,6 @@ requirements:
     - python
     - scikit-image
     - shapely
-    - six
 
 test:
   imports:
