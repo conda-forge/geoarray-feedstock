@@ -1,5 +1,5 @@
 {% set name = "geoarray" %}
-{% set version = "0.14.3" %}
+{% set version = "0.15.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 7f5d8a48f9dbadfe3c285f6c2516c39a9419608f602846d29940d508eeeeed3e
+  sha256: 74b1ab6ed094bc30c68f8f2869c464593ed070652c931fddbba9405e48d7756b
 
 build:
   number: 0
@@ -29,7 +29,7 @@ requirements:
     - numpy
     - pandas
     - pyepsg  # optional dependency of cartopy, needed by geoarray
-    - py-tools-ds >=0.14.35
+    - py-tools-ds >=0.18.0
     - python
     - scikit-image
     - shapely
@@ -50,7 +50,7 @@ test:
 about:
   home: https://pypi.org/project/geoarray/
   summary: Fast Python interface for geodata - either on disk or in memory.
-  license: GPL-3.0-or-later
+  license: Apache-2.0
   license_file: LICENSE
 
 extra:
