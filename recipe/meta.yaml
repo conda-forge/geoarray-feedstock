@@ -24,6 +24,7 @@ requirements:
   run:
     - cartopy
     - dill
+    - fontconfig >=2.13.1,<2.13.96  # [osx and py37]  # intermediate fix for https://github.com/kb47/pdf-poppler/issues/2#issuecomment-1063521221
     - gdal >=2.1.0
     - matplotlib-base
     - numpy
