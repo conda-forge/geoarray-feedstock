@@ -24,13 +24,12 @@ requirements:
   run:
     - cartopy
     - dill
-    - fontconfig >=2.13.1,<2.13.96  # [osx and py==37]  # intermediate fix for https://github.com/kb47/pdf-poppler/issues/2#issuecomment-1063521221
     - gdal >=2.1.0
     - matplotlib-base
     - numpy
     - pandas
     - pyepsg  # optional dependency of cartopy, needed by geoarray
-    - py-tools-ds >=0.18.0
+    - py-tools-ds >=0.19.0
     - python
     - scikit-image
     - shapely
