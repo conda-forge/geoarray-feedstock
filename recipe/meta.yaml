@@ -1,5 +1,5 @@
 {% set name = "geoarray" %}
-{% set version = "0.16.0" %}
+{% set version = "0.16.1" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 99c5dc5f7ac71558c79a9b09ea9783be5a90cd93a166659afe3cf05394b22816
+  sha256: cc546c1157db4a49b90203d3eeb14a615923e47f6c8b81bc74d42909d18ef37c
 
 build:
   number: 0
