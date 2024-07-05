@@ -1,5 +1,5 @@
 {% set name = "geoarray" %}
-{% set version = "0.17.2" %}
+{% set version = "0.18.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: b855bfa6440c188ff065e0c11bcc911442cfc34a03bf1606eb5e1bd85ff9a136
+  sha256: 9bcbd4d21d52c7ff0ed324091598fd200c06b286e11146c5d10083436a293fc7
 
 build:
   number: 0
@@ -27,7 +27,7 @@ requirements:
   run:
     - cartopy >=0.20
     - dill
-    - gdal >=2.1.0
+    - gdal >=3.8.0
     - matplotlib-base
     - numpy
     - pandas
