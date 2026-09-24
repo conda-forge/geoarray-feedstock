@@ -1,0 +1,65 @@
+schema_version: 1
+
+context:
+  name: geoarray
+  version: "0.19.2"
+
+package:
+  name: ${{ name|lower }}
+  version: ${{ version }}
+
+source:
+  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
+  sha256: e8c8f0a7361b7d39086e003dd77fb1f7caed3d5b7d97892d923dfa1a67631ced
+
+build:
+  number: 2
+  skip: match(python, "<3.11")
+  script: ${{ PYTHON }} -m pip install . -vv
+
+requirements:
+  build:
+    - if: build_platform != target_platform
+      then: python
+    - if: build_platform != target_platform
+      then: cross-python_${{ target_platform }}
+  host:
+    - pip
+    - python
+    - setuptools
+    - setuptools-git
+  run:
+    - cartopy >=0.20
+    - dill
+    - gdal >=3.8.0
+    - matplotlib-base
+    - numpy
+    - pandas
+    - py-tools-ds >=0.19.0
+    - python
+    - scikit-image
+    - shapely
+
+tests:
+  - python:
+      imports:
+        - geoarray
+        - geoarray.baseclasses
+        - geoarray.masks
+        - geoarray.metadata
+        - geoarray.subsetting
+      pip_check: true
+
+about:
+  summary: Fast Python interface for geodata - either on disk or in memory.
+  license: Apache-2.0
+  license_file: LICENSE
+  homepage: https://pypi.org/project/geoarray/
+
+extra:
+  recipe-maintainers:
+    - mxr-conda
+    - danschef
+    - rluria14
+    - ndmaxar
+    - RyanHackney
