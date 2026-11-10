@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: geoarray
-  version: "0.19.2"
+  version: "0.20.1"
 
 package:
   name: ${{ name|lower }}
@@ -10,11 +10,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
-  sha256: e8c8f0a7361b7d39086e003dd77fb1f7caed3d5b7d97892d923dfa1a67631ced
+  sha256: 2970e1eb4ec7863cce703568668afe9aa43378a2c320cbfed15ff7ac65603862
 
 build:
-  number: 2
-  skip: match(python, "<3.11")
+  number: 0
   script: ${{ PYTHON }} -m pip install . -vv
 
 requirements:
@@ -24,10 +23,9 @@ requirements:
     - if: build_platform != target_platform
       then: cross-python_${{ target_platform }}
   host:
+    - hatchling
     - pip
     - python
-    - setuptools
-    - setuptools-git
   run:
     - cartopy >=0.20
     - dill
