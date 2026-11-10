@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: geoarray
-  version: "0.19.2"
+  version: "0.20.0"
 
 package:
   name: ${{ name|lower }}
@@ -10,10 +10,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
-  sha256: e8c8f0a7361b7d39086e003dd77fb1f7caed3d5b7d97892d923dfa1a67631ced
+  sha256: 3a270ce7468267e84036414c324efbccead565948b29173cfb88a8c33b02f646
 
 build:
-  number: 2
+  number: 0
   skip: match(python, "<3.11")
   script: ${{ PYTHON }} -m pip install . -vv
 
